@@ -1,1 +1,29 @@
-test
+A real estate client who invests in tax liens approached me with a web scraping project.
+
+This project was to scrape the contents of http://www.cookcountyassessor.com given a unique PIN (Property Identification Number)
+
+The requirements:
+
+1.  Must contain the contents of the entire page.
+2.  File name much be the PIN in format XX-XX-XXX-XXXX.PDF
+3.  Footer must contain link to the page and the date.
+
+
+Price: $1500
+
+
+Explanation of code (See DataSync.py):
+
+pdfkit is needed to create a PDF from a url
+time is needed to capture the time to ultimately output to the footer of each PDF
+pyPdf is needed to read and write PDFs
+canvas is needed to draw the footer onto a pdf
+letter is needed for the pagesize
+
+The file begins by reading a list of PID from a file called input.txt.
+
+Then, it will loop through to create a URL for the property at cookcountyaccessor site.
+
+Next, it will load the page into a PDF, the footer with url & date onto another, then merge them into one PDF.
+
+Rinse and repeat for n, n being the number of PID's
