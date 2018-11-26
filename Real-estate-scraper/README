@@ -27,3 +27,11 @@ Then, it will loop through to create a URL for the property at cookcountyaccesso
 Next, it will load the page into a PDF, the footer with url & date onto another, then merge them into one PDF.
 
 Rinse and repeat for n, n being the number of PID's
+
+------
+
+A directory called 'PDF' will contain all PDF's.
+
+A file called errorLog.txt will contain all the errors and the associated PID.
+
+The console will print the current PID it is scraping out of total PID's in real-time.  I.e  3 / 1000. When it is finished, it will output the total seconds it took to scrape n numbers of PID's
